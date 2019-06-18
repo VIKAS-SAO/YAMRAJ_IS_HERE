@@ -1,0 +1,99 @@
+
+         *{
+            margin:0px;
+            padding: 0px;
+ 
+        }
+        body{
+            background: #212546;font-family: fantasy;
+        }
+
+    #header{ 
+        height: 100px;
+        background-color: black;
+        color: white; 
+        text-align: center;
+        font-size: 350%;
+        font-family: fantasy;        position: relative;
+    }
+    #middle1{ 
+        height: 230px;
+        background:linear-gradient(to right,#6b0b1e, #0d0d63);
+        color: #7b7dde;   text-align: center;    position: relative;padding-top: 60px;      
+              font-size: 150%;  
+    }
+     
+    #middle1 i{
+        font-size: 35px;
+        color:tomato;      font-size: 250%;
+
+    }
+    #footer{
+        height: 80px;
+        background-color: rgb(75, 9, 9);
+        text-align: center;padding-top: 20px;
+        
+    }
+    #footer p { font-size: 20px;color:rgb(236, 250, 38);}
+    h1{
+            color: #a0d410
+    }
+
+    
+      #container{
+        width: 100%;  text-align: center;margin-top:50px;
+        margin-bottom:100px;
+         height: 420px;
+         position: relative;
+           left:50%;
+           transform: translateX(-50%);
+     }
+    #container .main{
+        position: relative;
+        display: inline-block;
+         width: 250px;
+        height: 400px;
+        margin: 0px;
+    transform: scale(1);transition: .5s;
+}
+    #container .main .image{
+        position: absolute;
+        height:50%;
+        overflow: hidden;
+    }
+    #container .main .content{
+        text-align: center;
+        position: absolute;
+        height:50%;
+        width: 100%;
+        overflow: hidden;       
+
+     }
+     
+     
+    #container .main .image img{
+        width: 150%;
+    }
+    #container .main:nth-child(odd) .image{
+        bottom: 0px;
+    }
+    #container .main:nth-child(even) .content{
+        bottom: 0px;
+    }
+
+    #container .main .content p{
+         position: absolute;width: 100%;top:50%;left:50%;transform: translate(-50%,-50%);
+         box-sizing: border-box;font-size: 20px;color:white;font-family: fantasy;
+    }
+    #container .main .content a{
+            position: absolute;;top:150px;left:50%;transform: translate(-50%,-50%);font-size: 15px;border-radius: 50%;
+            color:white;border:5px white solid;padding: 10px;text-decoration: wavy;font-family: fantasy;letter-spacing: 1;
+              visibility: hidden; transform: scale(0);   transition: .5s; }
+
+    #container .main .content a:hover{
+        background-color:white;color:black;; 
+    }
+    #container .main:hover .content a{visibility: visible;transform: scale(1); }
+    #container .main:hover{
+            transform: scale(1.2);z-index: 1;box-shadow:10px 10px 10px black;
+    }

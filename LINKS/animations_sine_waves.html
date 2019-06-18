@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>animations_sine_waves</title>
+ 	<style type="text.css">
+	 canvas{
+
+		border:red 3px solid;
+	 }
+	 </style>
+
+ </head>
+ <body>
+
+	<canvas ></canvas>
+
+ 
+ 
+  <script type="text/javascript">
+ 
+ var canvas=document.querySelector("canvas");
+ canvas.height=innerHeight;
+ canvas.width=innerWidth; 
+ var c=canvas.getContext("2d");
+ ////////////////////////////////////////////////////////////
+
+
+
+ 	var x=0;
+
+  		
+	
+
+  
+	 
+   function  animate(){
+
+	
+
+
+	 requestAnimationFrame(animate);
+	 c.fillStyle="rgba(100,0,0,.02)"; 
+	 c.fillRect(0,0,innerWidth,innerHeight);
+
+ 	 x++;
+		c.beginPath();
+	 c.moveTo(0,innerHeight/2);
+	for(var i=0;i<innerWidth;i++){
+		c.lineTo(i,innerHeight/2-400*Math.sin(i*.001+x/100));
+	} 
+
+	 c.strokeStyle="green";
+	 c.stroke();
+	  }
+
+
+	  animate();
+
+
+
+ </script>
+ </body>
+ </html>
